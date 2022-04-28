@@ -59,10 +59,10 @@ while True:
         print('Connected by', addr)
 
         # Thread sent message
-        th1 = threading.Thread(target=sent_msg, args=(client))
+        th1 = threading.Thread(target=sent_msg, args=(client,))
 
         # Thread receive data
-        th2 = threading.Thread(target=rev_msg, args=(client))
+        th2 = threading.Thread(target=rev_msg, args=(client,))
 
         # Set two thread is Deamon
         th1.daemon = True
